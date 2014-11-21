@@ -20197,16 +20197,16 @@ cljs.core.fn_QMARK_ = function(a) {
 };
 cljs.core.with_meta = function with_meta(b, c) {
   return cljs.core.fn_QMARK_.call(null, b) && !(b ? b.cljs$lang$protocol_mask$partition0$ & 262144 || b.cljs$core$IWithMeta$ || (b.cljs$lang$protocol_mask$partition0$ ? 0 : cljs.core.native_satisfies_QMARK_.call(null, cljs.core.IWithMeta, b)) : cljs.core.native_satisfies_QMARK_.call(null, cljs.core.IWithMeta, b)) ? with_meta.call(null, function() {
-    "undefined" === typeof cljs.core.t4977 && (cljs.core.t4977 = function(b, c, f, g) {
+    "undefined" === typeof cljs.core.t5805 && (cljs.core.t5805 = function(b, c, f, g) {
       this.meta = b;
       this.o = c;
       this.with_meta = f;
-      this.meta4978 = g;
+      this.meta5806 = g;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393217;
-    }, cljs.core.t4977.cljs$lang$type = !0, cljs.core.t4977.cljs$lang$ctorStr = "cljs.core/t4977", cljs.core.t4977.cljs$lang$ctorPrWriter = function(b, c, f) {
-      return cljs.core._write.call(null, c, "cljs.core/t4977");
-    }, cljs.core.t4977.prototype.call = function() {
+    }, cljs.core.t5805.cljs$lang$type = !0, cljs.core.t5805.cljs$lang$ctorStr = "cljs.core/t5805", cljs.core.t5805.cljs$lang$ctorPrWriter = function(b, c, f) {
+      return cljs.core._write.call(null, c, "cljs.core/t5805");
+    }, cljs.core.t5805.prototype.call = function() {
       var b = function(b, c) {
         return cljs.core.apply.call(null, b.o, c);
       }, c = function(c, e) {
@@ -20223,9 +20223,9 @@ cljs.core.with_meta = function with_meta(b, c) {
       };
       c.cljs$core$IFn$_invoke$arity$variadic = b;
       return c;
-    }(), cljs.core.t4977.prototype.apply = function(b, c) {
+    }(), cljs.core.t5805.prototype.apply = function(b, c) {
       return this.call.apply(this, [this].concat(cljs.core.aclone.call(null, c)));
-    }, cljs.core.t4977.prototype.cljs$core$IFn$_invoke$arity$2 = function() {
+    }, cljs.core.t5805.prototype.cljs$core$IFn$_invoke$arity$2 = function() {
       var b = function(b) {
         return cljs.core.apply.call(null, self__.o, b);
       }, c = function(c) {
@@ -20240,14 +20240,14 @@ cljs.core.with_meta = function with_meta(b, c) {
       };
       c.cljs$core$IFn$_invoke$arity$variadic = b;
       return c;
-    }(), cljs.core.t4977.prototype.cljs$core$Fn$ = !0, cljs.core.t4977.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-      return this.meta4978;
-    }, cljs.core.t4977.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-      return new cljs.core.t4977(this.meta, this.o, this.with_meta, c);
-    }, cljs.core.__GT_t4977 = function(b, c, f, g) {
-      return new cljs.core.t4977(b, c, f, g);
+    }(), cljs.core.t5805.prototype.cljs$core$Fn$ = !0, cljs.core.t5805.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+      return this.meta5806;
+    }, cljs.core.t5805.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+      return new cljs.core.t5805(this.meta, this.o, this.with_meta, c);
+    }, cljs.core.__GT_t5805 = function(b, c, f, g) {
+      return new cljs.core.t5805(b, c, f, g);
     });
-    return new cljs.core.t4977(c, b, with_meta, null);
+    return new cljs.core.t5805(c, b, with_meta, null);
   }(), c) : null == b ? null : cljs.core._with_meta.call(null, b, c);
 };
 cljs.core.meta = function(a) {
@@ -34220,36 +34220,71 @@ om.core.rendering_QMARK_ = function() {
 var om_infinite_scroll = {core:{}};
 cljs.core.enable_console_print_BANG_.call(null);
 cljs.core.println.call(null, "hello");
-om_infinite_scroll.core.panel_item = function(a) {
-  return React.DOM.li({className:"is-item"}, React.DOM.div({}, (new cljs.core.Keyword(null, "id", "id", 1013907597)).cljs$core$IFn$_invoke$arity$1(a)), React.DOM.div({}, "Banh mi selfies shabby chic disrupt polaroid roof party. Portland High Life brunch sustainable, plaid Kickstarter pickled four loko 3 wolf moon whatever."));
+om_infinite_scroll.core.panel_item = function panel_item(b, c) {
+  var d = cljs.core.seq_QMARK_.call(null, b) ? cljs.core.apply.call(null, cljs.core.hash_map, b) : b, e = cljs.core.get.call(null, d, new cljs.core.Keyword(null, "n", "n", 1013904352));
+  "undefined" === typeof om_infinite_scroll.core.t7533 && (om_infinite_scroll.core.t7533 = function(b, c, d, e, l, m) {
+    this.n = b;
+    this.map__7532 = c;
+    this.owner = d;
+    this.p__7527 = e;
+    this.panel_item = l;
+    this.meta7534 = m;
+    this.cljs$lang$protocol_mask$partition1$ = 0;
+    this.cljs$lang$protocol_mask$partition0$ = 393216;
+  }, om_infinite_scroll.core.t7533.cljs$lang$type = !0, om_infinite_scroll.core.t7533.cljs$lang$ctorStr = "om-infinite-scroll.core/t7533", om_infinite_scroll.core.t7533.cljs$lang$ctorPrWriter = function(b, c, d) {
+    return cljs.core._write.call(null, c, "om-infinite-scroll.core/t7533");
+  }, om_infinite_scroll.core.t7533.prototype.om$core$IRender$ = !0, om_infinite_scroll.core.t7533.prototype.om$core$IRender$render$arity$1 = function(b) {
+    b = [cljs.core.str(this.n), cljs.core.str("Banh mi selfies shabby chic disrupt polaroid roof party. Portland High Life brunch sustainable, plaid Kickstarter pickled four loko 3 wolf moon whatever.")].join("");
+    return React.DOM.li({className:"is-item"}, React.DOM.div({}, (new cljs.core.Keyword(null, "id", "id", 1013907597)).cljs$core$IFn$_invoke$arity$1(om_infinite_scroll.core.data)), React.DOM.div({}, b));
+  }, om_infinite_scroll.core.t7533.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta7534;
+  }, om_infinite_scroll.core.t7533.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+    return new om_infinite_scroll.core.t7533(this.n, this.map__7532, this.owner, this.p__7527, this.panel_item, c);
+  }, om_infinite_scroll.core.__GT_t7533 = function(b, c, d, e, l, m) {
+    return new om_infinite_scroll.core.t7533(b, c, d, e, l, m);
+  });
+  return new om_infinite_scroll.core.t7533(e, d, c, b, panel_item, null);
 };
 om_infinite_scroll.core.handleScroll = function(a, b) {
-  var c = om.core.get_node.call(null, a), d = c.scrollTop;
-  om.core.get_render_state.call(null, a);
-  return cljs.core.not_EQ_.call(null, d, (new cljs.core.Keyword(null, "scrollTop", "scrollTop", 1431684794)).cljs$core$IFn$_invoke$arity$1(c)) ? om.core.set_state_BANG_.call(null, a, new cljs.core.Keyword(null, "scrollTop", "scrollTop", 1431684794), d) : null;
+  var c = om.core.get_node.call(null, a);
+  if (0 === c.scrollTop) {
+    return null;
+  }
+  c.scrollTop = 0;
+  return om.core.update_state_BANG_.call(null, a, new cljs.core.Keyword(null, "start-entry", "start-entry", 2340848313), cljs.core.partial.call(null, cljs.core._PLUS_, 10));
 };
+om_infinite_scroll.core.n_show = 40;
 om_infinite_scroll.core.panel = function panel(b, c) {
-  "undefined" === typeof om_infinite_scroll.core.t6572 && (om_infinite_scroll.core.t6572 = function(b, c, f, g) {
+  "undefined" === typeof om_infinite_scroll.core.t7542 && (om_infinite_scroll.core.t7542 = function(b, c, f, g) {
     this.owner = b;
     this.data = c;
     this.panel = f;
-    this.meta6573 = g;
+    this.meta7543 = g;
     this.cljs$lang$protocol_mask$partition1$ = 0;
     this.cljs$lang$protocol_mask$partition0$ = 393216;
-  }, om_infinite_scroll.core.t6572.cljs$lang$type = !0, om_infinite_scroll.core.t6572.cljs$lang$ctorStr = "om-infinite-scroll.core/t6572", om_infinite_scroll.core.t6572.cljs$lang$ctorPrWriter = function(b, c, f) {
-    return cljs.core._write.call(null, c, "om-infinite-scroll.core/t6572");
-  }, om_infinite_scroll.core.t6572.prototype.om$core$IRenderState$ = !0, om_infinite_scroll.core.t6572.prototype.om$core$IRenderState$render_state$arity$2 = function(b, c) {
-    console.count("render");
-    return React.DOM.div({onScroll:cljs.core.partial.call(null, om_infinite_scroll.core.handleScroll, this.owner), className:"is-panel"}, cljs.core.apply.call(null, om.dom.ol, {className:"is-content"}, cljs.core.map.call(null, function(b) {
-      return om_infinite_scroll.core.panel_item.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "id", "id", 1013907597), b], null));
-    }, cljs.core.range.call(null, 1, 1E3))));
-  }, om_infinite_scroll.core.t6572.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-    return this.meta6573;
-  }, om_infinite_scroll.core.t6572.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-    return new om_infinite_scroll.core.t6572(this.owner, this.data, this.panel, c);
-  }, om_infinite_scroll.core.__GT_t6572 = function(b, c, f, g) {
-    return new om_infinite_scroll.core.t6572(b, c, f, g);
+  }, om_infinite_scroll.core.t7542.cljs$lang$type = !0, om_infinite_scroll.core.t7542.cljs$lang$ctorStr = "om-infinite-scroll.core/t7542", om_infinite_scroll.core.t7542.cljs$lang$ctorPrWriter = function(b, c, f) {
+    return cljs.core._write.call(null, c, "om-infinite-scroll.core/t7542");
+  }, om_infinite_scroll.core.t7542.prototype.om$core$IRenderState$ = !0, om_infinite_scroll.core.t7542.prototype.om$core$IRenderState$render_state$arity$2 = function(b, c) {
+    var f = cljs.core.seq_QMARK_.call(null, c) ? cljs.core.apply.call(null, cljs.core.hash_map, c) : c, f = cljs.core.get.call(null, f, new cljs.core.Keyword(null, "start-entry", "start-entry", 2340848313));
+    return React.DOM.div({className:"is-panel"}, cljs.core.apply.call(null, om.dom.ol, {className:"is-content"}, cljs.core.take.call(null, om_infinite_scroll.core.n_show, cljs.core.drop.call(null, f, cljs.core.map.call(null, function(b) {
+      return om.core.build.call(null, om_infinite_scroll.core.panel_item, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "n", "n", 1013904352), b], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "react-key", "react-key", 4184082563), b], null));
+    }, cljs.core.range.call(null, 1, 1E3))))));
+  }, om_infinite_scroll.core.t7542.prototype.om$core$IDidMount$ = !0, om_infinite_scroll.core.t7542.prototype.om$core$IDidMount$did_mount$arity$1 = function(b) {
+    var c = this;
+    return om.core.get_node.call(null, c.owner).addEventListener("mousewheel", function(b) {
+      cljs.core.println.call(null, "Mouse wheel ", b.wheelDeltaY);
+      return om.core.update_state_BANG_.call(null, c.owner, new cljs.core.Keyword(null, "start-entry", "start-entry", 2340848313), function(c) {
+        c = -b.wheelDeltaY + c;
+        return 0 > c ? 0 : c;
+      });
+    }, !1);
+  }, om_infinite_scroll.core.t7542.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta7543;
+  }, om_infinite_scroll.core.t7542.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+    return new om_infinite_scroll.core.t7542(this.owner, this.data, this.panel, c);
+  }, om_infinite_scroll.core.__GT_t7542 = function(b, c, f, g) {
+    return new om_infinite_scroll.core.t7542(b, c, f, g);
   });
-  return new om_infinite_scroll.core.t6572(c, b, panel, null);
+  return new om_infinite_scroll.core.t7542(c, b, panel, null);
 };
 om.core.root.call(null, om_infinite_scroll.core.panel, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "text", "text", 1017460895), "Hello world!"], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "target", "target", 4427965699), document.body], null));
