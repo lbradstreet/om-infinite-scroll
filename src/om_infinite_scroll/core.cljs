@@ -34,7 +34,6 @@
                            (let [position (max 0 
                                                (- (om/get-state owner :current-position)
                                                   (.-wheelDeltaY e)))
-                                 _ (println "Pos " position " " (.-wheelDeltaY e))
                                  current-entry (/ position item-height)]
                              (om/set-state! owner :current-position position)
                              (om/set-state! owner :current-entry current-entry)))
