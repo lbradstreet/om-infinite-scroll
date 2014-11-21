@@ -6,62 +6,45 @@
 (enable-console-print!)
 (println "hello")
 
+(def item-height 50)
+(def n-show 40)
 
-(defn panel-item [{:keys [n]} owner]
+(defn panel-item [{:keys [n id]} owner]
   (reify
     om/IRender
     (render [_] 
       (let [name (str n "Banh mi selfies shabby chic disrupt polaroid roof party. Portland High Life brunch sustainable, plaid Kickstarter pickled four loko 3 wolf moon whatever.")]
-        (dom/li #js {:className "is-item"}
-                (dom/div #js {} (:id data))
+        (dom/li #js {:style #js {:height item-height}
+                     :className "is-item"}
+                (dom/div #js {} id)
                 (dom/div #js {} name))))))
-
-; DOM read + set-state
-; (defn handleScroll [owner e]
-;   (let [node (om/get-node owner)]
-;         (om/set-state! owner :scrollTop (.-scrollTop node))))
-
-; DOM read + set-state
-(defn handleScroll [owner e]
-  (let [node (om/get-node owner)
-        scrollTop (.-scrollTop node)]
-    (when-not (zero? scrollTop) 
-      (set! (.-scrollTop node) 0)
-      (om/update-state! owner :start-entry (partial + 10)))))
-
-; DOM read
-; (defn handleScroll [owner e]
-;   (let [node (om/get-node owner)]
-;         (println (.-scrollTop node))))
-
-; Set-state only
-; (defn handleScroll [owner e]
-;   (om/set-state! owner :scrollTop 1))
-
-; Nothing
-; (defn handleScroll [owner e])
-
-(def n-show 40)
 
 (defn panel [data owner]
   (reify
+
+    om/IInitState
+    (init-state [_]
+      {:current-entry 0
+       :current-position 0})
     om/IDidMount
     (did-mount [_]
       (.addEventListener (om/get-node owner)
                          "mousewheel" 
                          (fn [e] 
-                           (println "Mouse wheel " (.-wheelDeltaY e))
-                           (om/update-state! owner 
-                                             :start-entry 
-                                             #(max 0 (+ (- (.-wheelDeltaY e)) 
-                                                        %))))
+                           (let [position (max 0 
+                                               (- (om/get-state owner :current-position)
+                                                  (.-wheelDeltaY e)))
+                                 _ (println "Pos " position " " (.-wheelDeltaY e))
+                                 current-entry (/ position item-height)]
+                             (om/set-state! owner :current-position position)
+                             (om/set-state! owner :current-entry current-entry)))
                          false))
     om/IRenderState
-    (render-state [this {:keys [start-entry]}]
+    (render-state [this {:keys [current-entry]}]
       (dom/div #js {:className "is-panel"}
                (apply dom/ol #js {:className "is-content"}
                       (take n-show
-                            (drop start-entry 
+                            (drop current-entry 
                                   (map (fn [n] 
                                          (om/build panel-item 
                                                    {:n n} 

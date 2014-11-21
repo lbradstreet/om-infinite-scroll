@@ -34220,71 +34220,69 @@ om.core.rendering_QMARK_ = function() {
 var om_infinite_scroll = {core:{}};
 cljs.core.enable_console_print_BANG_.call(null);
 cljs.core.println.call(null, "hello");
+om_infinite_scroll.core.item_height = 50;
+om_infinite_scroll.core.n_show = 40;
 om_infinite_scroll.core.panel_item = function panel_item(b, c) {
-  var d = cljs.core.seq_QMARK_.call(null, b) ? cljs.core.apply.call(null, cljs.core.hash_map, b) : b, e = cljs.core.get.call(null, d, new cljs.core.Keyword(null, "n", "n", 1013904352));
-  "undefined" === typeof om_infinite_scroll.core.t7533 && (om_infinite_scroll.core.t7533 = function(b, c, d, e, l, m) {
+  var d = cljs.core.seq_QMARK_.call(null, b) ? cljs.core.apply.call(null, cljs.core.hash_map, b) : b, e = cljs.core.get.call(null, d, new cljs.core.Keyword(null, "id", "id", 1013907597)), f = cljs.core.get.call(null, d, new cljs.core.Keyword(null, "n", "n", 1013904352));
+  "undefined" === typeof om_infinite_scroll.core.t8013 && (om_infinite_scroll.core.t8013 = function(b, c, d, e, f, n, p) {
     this.n = b;
-    this.map__7532 = c;
-    this.owner = d;
-    this.p__7527 = e;
-    this.panel_item = l;
-    this.meta7534 = m;
+    this.id = c;
+    this.map__8012 = d;
+    this.owner = e;
+    this.p__8007 = f;
+    this.panel_item = n;
+    this.meta8014 = p;
     this.cljs$lang$protocol_mask$partition1$ = 0;
     this.cljs$lang$protocol_mask$partition0$ = 393216;
-  }, om_infinite_scroll.core.t7533.cljs$lang$type = !0, om_infinite_scroll.core.t7533.cljs$lang$ctorStr = "om-infinite-scroll.core/t7533", om_infinite_scroll.core.t7533.cljs$lang$ctorPrWriter = function(b, c, d) {
-    return cljs.core._write.call(null, c, "om-infinite-scroll.core/t7533");
-  }, om_infinite_scroll.core.t7533.prototype.om$core$IRender$ = !0, om_infinite_scroll.core.t7533.prototype.om$core$IRender$render$arity$1 = function(b) {
+  }, om_infinite_scroll.core.t8013.cljs$lang$type = !0, om_infinite_scroll.core.t8013.cljs$lang$ctorStr = "om-infinite-scroll.core/t8013", om_infinite_scroll.core.t8013.cljs$lang$ctorPrWriter = function(b, c, d) {
+    return cljs.core._write.call(null, c, "om-infinite-scroll.core/t8013");
+  }, om_infinite_scroll.core.t8013.prototype.om$core$IRender$ = !0, om_infinite_scroll.core.t8013.prototype.om$core$IRender$render$arity$1 = function(b) {
     b = [cljs.core.str(this.n), cljs.core.str("Banh mi selfies shabby chic disrupt polaroid roof party. Portland High Life brunch sustainable, plaid Kickstarter pickled four loko 3 wolf moon whatever.")].join("");
-    return React.DOM.li({className:"is-item"}, React.DOM.div({}, (new cljs.core.Keyword(null, "id", "id", 1013907597)).cljs$core$IFn$_invoke$arity$1(om_infinite_scroll.core.data)), React.DOM.div({}, b));
-  }, om_infinite_scroll.core.t7533.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-    return this.meta7534;
-  }, om_infinite_scroll.core.t7533.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-    return new om_infinite_scroll.core.t7533(this.n, this.map__7532, this.owner, this.p__7527, this.panel_item, c);
-  }, om_infinite_scroll.core.__GT_t7533 = function(b, c, d, e, l, m) {
-    return new om_infinite_scroll.core.t7533(b, c, d, e, l, m);
+    return React.DOM.li({className:"is-item", style:{height:om_infinite_scroll.core.item_height}}, React.DOM.div({}, this.id), React.DOM.div({}, b));
+  }, om_infinite_scroll.core.t8013.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta8014;
+  }, om_infinite_scroll.core.t8013.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+    return new om_infinite_scroll.core.t8013(this.n, this.id, this.map__8012, this.owner, this.p__8007, this.panel_item, c);
+  }, om_infinite_scroll.core.__GT_t8013 = function(b, c, d, e, f, n, p) {
+    return new om_infinite_scroll.core.t8013(b, c, d, e, f, n, p);
   });
-  return new om_infinite_scroll.core.t7533(e, d, c, b, panel_item, null);
+  return new om_infinite_scroll.core.t8013(f, e, d, c, b, panel_item, null);
 };
-om_infinite_scroll.core.handleScroll = function(a, b) {
-  var c = om.core.get_node.call(null, a);
-  if (0 === c.scrollTop) {
-    return null;
-  }
-  c.scrollTop = 0;
-  return om.core.update_state_BANG_.call(null, a, new cljs.core.Keyword(null, "start-entry", "start-entry", 2340848313), cljs.core.partial.call(null, cljs.core._PLUS_, 10));
-};
-om_infinite_scroll.core.n_show = 40;
 om_infinite_scroll.core.panel = function panel(b, c) {
-  "undefined" === typeof om_infinite_scroll.core.t7542 && (om_infinite_scroll.core.t7542 = function(b, c, f, g) {
+  "undefined" === typeof om_infinite_scroll.core.t8021 && (om_infinite_scroll.core.t8021 = function(b, c, f, g) {
     this.owner = b;
     this.data = c;
     this.panel = f;
-    this.meta7543 = g;
+    this.meta8022 = g;
     this.cljs$lang$protocol_mask$partition1$ = 0;
     this.cljs$lang$protocol_mask$partition0$ = 393216;
-  }, om_infinite_scroll.core.t7542.cljs$lang$type = !0, om_infinite_scroll.core.t7542.cljs$lang$ctorStr = "om-infinite-scroll.core/t7542", om_infinite_scroll.core.t7542.cljs$lang$ctorPrWriter = function(b, c, f) {
-    return cljs.core._write.call(null, c, "om-infinite-scroll.core/t7542");
-  }, om_infinite_scroll.core.t7542.prototype.om$core$IRenderState$ = !0, om_infinite_scroll.core.t7542.prototype.om$core$IRenderState$render_state$arity$2 = function(b, c) {
-    var f = cljs.core.seq_QMARK_.call(null, c) ? cljs.core.apply.call(null, cljs.core.hash_map, c) : c, f = cljs.core.get.call(null, f, new cljs.core.Keyword(null, "start-entry", "start-entry", 2340848313));
+  }, om_infinite_scroll.core.t8021.cljs$lang$type = !0, om_infinite_scroll.core.t8021.cljs$lang$ctorStr = "om-infinite-scroll.core/t8021", om_infinite_scroll.core.t8021.cljs$lang$ctorPrWriter = function(b, c, f) {
+    return cljs.core._write.call(null, c, "om-infinite-scroll.core/t8021");
+  }, om_infinite_scroll.core.t8021.prototype.om$core$IRenderState$ = !0, om_infinite_scroll.core.t8021.prototype.om$core$IRenderState$render_state$arity$2 = function(b, c) {
+    var f = cljs.core.seq_QMARK_.call(null, c) ? cljs.core.apply.call(null, cljs.core.hash_map, c) : c, f = cljs.core.get.call(null, f, new cljs.core.Keyword(null, "current-entry", "current-entry", 2155351696));
     return React.DOM.div({className:"is-panel"}, cljs.core.apply.call(null, om.dom.ol, {className:"is-content"}, cljs.core.take.call(null, om_infinite_scroll.core.n_show, cljs.core.drop.call(null, f, cljs.core.map.call(null, function(b) {
       return om.core.build.call(null, om_infinite_scroll.core.panel_item, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "n", "n", 1013904352), b], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "react-key", "react-key", 4184082563), b], null));
     }, cljs.core.range.call(null, 1, 1E3))))));
-  }, om_infinite_scroll.core.t7542.prototype.om$core$IDidMount$ = !0, om_infinite_scroll.core.t7542.prototype.om$core$IDidMount$did_mount$arity$1 = function(b) {
+  }, om_infinite_scroll.core.t8021.prototype.om$core$IDidMount$ = !0, om_infinite_scroll.core.t8021.prototype.om$core$IDidMount$did_mount$arity$1 = function(b) {
     var c = this;
     return om.core.get_node.call(null, c.owner).addEventListener("mousewheel", function(b) {
-      cljs.core.println.call(null, "Mouse wheel ", b.wheelDeltaY);
-      return om.core.update_state_BANG_.call(null, c.owner, new cljs.core.Keyword(null, "start-entry", "start-entry", 2340848313), function(c) {
-        c = -b.wheelDeltaY + c;
-        return 0 > c ? 0 : c;
-      });
+      var d;
+      d = om.core.get_state.call(null, c.owner, new cljs.core.Keyword(null, "current-position", "current-position", 1165519471)) - b.wheelDeltaY;
+      d = 0 > d ? 0 : d;
+      cljs.core.println.call(null, "Pos ", d, " ", b.wheelDeltaY);
+      b = d / om_infinite_scroll.core.item_height;
+      om.core.set_state_BANG_.call(null, c.owner, new cljs.core.Keyword(null, "current-position", "current-position", 1165519471), d);
+      return om.core.set_state_BANG_.call(null, c.owner, new cljs.core.Keyword(null, "current-entry", "current-entry", 2155351696), b);
     }, !1);
-  }, om_infinite_scroll.core.t7542.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-    return this.meta7543;
-  }, om_infinite_scroll.core.t7542.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-    return new om_infinite_scroll.core.t7542(this.owner, this.data, this.panel, c);
-  }, om_infinite_scroll.core.__GT_t7542 = function(b, c, f, g) {
-    return new om_infinite_scroll.core.t7542(b, c, f, g);
+  }, om_infinite_scroll.core.t8021.prototype.om$core$IInitState$ = !0, om_infinite_scroll.core.t8021.prototype.om$core$IInitState$init_state$arity$1 = function(b) {
+    return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "current-entry", "current-entry", 2155351696), 0, new cljs.core.Keyword(null, "current-position", "current-position", 1165519471), 0], null);
+  }, om_infinite_scroll.core.t8021.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta8022;
+  }, om_infinite_scroll.core.t8021.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+    return new om_infinite_scroll.core.t8021(this.owner, this.data, this.panel, c);
+  }, om_infinite_scroll.core.__GT_t8021 = function(b, c, f, g) {
+    return new om_infinite_scroll.core.t8021(b, c, f, g);
   });
-  return new om_infinite_scroll.core.t7542(c, b, panel, null);
+  return new om_infinite_scroll.core.t8021(c, b, panel, null);
 };
 om.core.root.call(null, om_infinite_scroll.core.panel, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "text", "text", 1017460895), "Hello world!"], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "target", "target", 4427965699), document.body], null));
